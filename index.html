@@ -1,0 +1,1637 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta content="IE=edge" http-equiv="X-UA-Compatible">
+<html>
+<head>
+<meta charset="UTF-8">
+<title>{$config.sitetitle}|{$config.sitetitle2}</title>
+<meta name="Keywords" content="{$config.sitekeywords}" />
+<meta name="Description" content="{$config.sitedescription}" />
+<link rel="shortcut icon" href="__TMPL__images/favicon.ico" type="image/x-icon" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+<!--首页幻灯css-->
+<link href="__TMPL__source/css/lanrenzhijia.css" rel="stylesheet" type="text/css" />
+
+<!--主页菜单的css和js-->
+<link href="__TMPL__source/css/snmenu.css" rel="stylesheet">  
+<!--顶部菜单css-->
+<link media="screen" rel="stylesheet" href="__TMPL__source/css/topmenu.css"/>
+<!--顶部菜单js-->
+<script src="__TMPL__source/js/jquery-1.7.2.min.js"></script> 
+<script type="text/javascript">
+jQuery(document).ready(function(){
+	var qcloud={};
+	$('[_t_nav]').hover(function(){
+		var _nav = $(this).attr('_t_nav');
+		clearTimeout( qcloud[ _nav + '_timer' ] );
+		qcloud[ _nav + '_timer' ] = setTimeout(function(){
+		$('[_t_nav]').each(function(){
+		$(this)[ _nav == $(this).attr('_t_nav') ? 'addClass':'removeClass' ]('nav-up-selected');
+		});
+		$('#'+_nav).stop(true,true).slideDown(200);
+		}, 150);
+	},function(){
+		var _nav = $(this).attr('_t_nav');
+		clearTimeout( qcloud[ _nav + '_timer' ] );
+		qcloud[ _nav + '_timer' ] = setTimeout(function(){
+		$('[_t_nav]').removeClass('nav-up-selected');
+		$('#'+_nav).stop(true,true).slideUp(200);
+		}, 150);
+	});
+});
+</script>
+
+
+
+<!--幻灯css-->
+<link href="__TMPL__source/css/sn_slide.css" rel="stylesheet"> 
+<!--内容块css-->
+<link href="__TMPL__source/css/module.css" rel="stylesheet"> 
+<!--科学讲堂 css-->
+
+
+ <style>
+ *{font-family:"宋体";}
+ .vanfonbox_left{
+  border-top: 1px #c9c9c9 solid;
+ border-right: 1px #c9c9c9 solid;
+border-bottom: 1px #c9c9c9 solid;
+border-left: 1px #c9c9c9 solid;
+width: 278px;
+height: auto;
+overflow: hidden;
+margin-bottom:12px;
+-moz-box-shadow: 0 1px 2px #d3d3d3;
+-webkit-box-shadow: 0 1px 2px #d3d3d3;
+box-shadow: 0 1px 2px #d3d3d3;
+background-color:#fcfcfc;
+}
+
+body{background:url(__TMPL__source/images/body_bg29.jpg) repeat-x left top;background-color:#f3f3f3;}
+
+ .vanfonbox_left .toptitle {
+
+height: 30px;
+border-bottom:1px solid #f2f2f2;
+}
+
+ .vanfonbox_left .bga{background: url(__TMPL__images/slide/index_tabg01a.jpg) repeat-x;}
+  .vanfonbox_left .bgb{background: url(__TMPL__images/slide/index_tabg01b.jpg) repeat-x;}
+ .vanfonbox_left .toptitle .title{
+ text-align:left;
+ background:url(/Web/Tpl/xinwen/images/chabei.jpg) no-repeat 3px center;
+ width:180px;height:31px;line-height:31px;padding-left:35px;
+ 
+font-size: 14px;
+float: left;
+font-weight:700;
+color:#FF9900;
+}
+
+ .vanfonbox_left .toptitle .more{margin: 5px 5px 5px 15px;
+font-size: 14px;
+float: right;}
+
+.vanfonbox_left .toptitle .more a{color:#999;background:none;}
+
+.vanfonbox_left .toptitle .more a:hover{color:red;}
+
+ .vanfonbox_left ul img {
+margin:10px 10px 10px 10px;
+float:left;
+}
+
+.vanfonbox_left ul{
+margin-bottom: 10px;
+float: left;
+}
+ .vanfonbox_left ul p {
+margin:10px 10px 10px 0px;
+float:right;
+width:120px;
+font-size:12px;
+line-height:18px;
+height:73px;
+overflow:hidden;
+text-align:left;
+}
+
+.vanfonbox_left ul p a.wenzi{
+font-size:14px;
+}
+ .vanfonbox_left ul li.normal{
+  width:240px;height:25px;text-overflow:ellipsis;white-space:nowrap;overflow:hidden;
+ clear:both;
+ font-size:14px;
+ text-align:left;
+margin: 10px 10px 0px 10px;
+background:url(__TMPL__images/slide/dot.png) no-repeat;
+}
+
+ .vanfonbox_left ul li.normal a{
+
+color:#333;
+text-decoration: blink;
+line-height: 24px;
+
+}
+ </style>
+<!--科学讲堂 css结束-->
+<script src="__TMPL__source/js/snmenu.js"></script>
+
+
+<!--手拍秀图片滚动使用的javascript-->
+<link href="__TMPL__source/css/lrtk.css" rel="stylesheet">  
+
+
+<script type="text/javascript" src="__TMPL__source/js/jquery.SuperSlide.js"></script>    
+<script src="__TMPL__source/js/lrtk.js"></script> 
+
+<style type="text/css">
+
+ a.wenzi{color:blue;text-decoration: none;font-size: 14px;}
+ a.wenzi:hover{color:red;background-color: yellow;}
+ a.baozhi{color:blue;text-decoration:none;}
+  a.baozhi:hover{color:white;background-color: blue;}
+  table.biaoge{background-color: #e8eef3;width:450px;}
+  table.biaoge1{background-color: #ffefd5;width:250px;}
+  table.biaoge2{background-color: #ffefd5;width:250px;}
+  table.biaoge3{background-color: #e0f394;width:250px;}  
+  table.td.lanmu1{width:250px;} <!--左右栏目宽度-->
+  table.td.lanmu2{width:450px;}<!--中间栏目宽度-->
+  table.bottom_side_table{background-color:#e8eef3;width:300px;}<!--底部两侧表格-->
+
+  table.bigtable{width:960px;}
+  input.inputstyle{height:20px;}
+  button.btn{height:22px;}
+  .titbg {background:url(__TMPL__images/tit_bg.gif) center repeat-x;}<!--栏目标题背景色-->
+  .bk {
+	border-top-width: 1px;
+	border-right-width: 1px;
+	border-bottom-width: 1px;
+	border-left-width: 1px;
+	border-top-style: none;
+	border-right-style: solid;
+	border-bottom-style: solid;
+	border-left-style: solid;
+	border-top-color: #ABC7DD;
+	border-right-color: #ABC7DD;
+	border-bottom-color: #ABC7DD;
+	border-left-color: #ABC7DD;
+}
+.zpj {
+	padding-left: 5px;
+	padding-top:2px;
+}
+table.td.index_content {
+	font-size: 20px;
+	line-height: 5;
+}
+.zpj {
+	padding-left: 5px;
+	padding-top:2px;
+}
+#rdwt a {color: #2F6A9C;text-decoration:none;}
+.14_lan {font-size: 14px;font-weight: bold;	color: #2F6A9C;}
+</style>
+<!--[if lt IE 9]>
+<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+<![endif]-->
+
+</head>
+
+<body > 
+
+ <div align="center">
+
+<!--原有顶部栏--
+<table align="center" width="960" cellpadding="0" cellspacing="0" style="margin:0;padding:0;border:0"> 
+   <!-- 建党动画
+   <tr valign="middle" align="center">
+    
+
+         <object classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" codebase="http://fpdownload.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=8,0,0,0" width="950" height="125">
+             <param name="movie" value="__TMPL__source/jd.swf" />
+             <param name="quality" value="high" />
+             <param name="allowScriptAccess" value="always" />
+             <param name="wmode" value="transparent">
+             <embed src="__TMPL__source/jd.swf"
+                    quality="high"
+                    type="application/x-shockwave-flash"
+                    WMODE="transparent"
+                    width="950"
+                    height="125"
+                    pluginspage="http://www.macromedia.com/go/getflashplayer"
+                    allowScriptAccess="always" />
+         </object>
+
+
+     </tr>   
+
+
+  <tr bgcolor="#e5eef7" valign="middle" align="center">
+              --显示时间--
+               <td width="20%" height="20px" valign="top">
+                    <table>
+                    <tr>
+                   <td width="10px"></td>
+                   <td align="left"><php>echo $fxTime;</php> </td>
+                   </tr>
+                    </table>
+      </td>
+                --天气预报--
+                <td width="20%"valign="top" height="20px">
+                <iframe allowtransparency="true" frameborder="0" width="255" height="28" scrolling="no" src="http://tianqi.2345.com/plugin/widget/index.htm?s=3&z=1&t=0&v=0&d=1&bd=0&k=&f=&q=1&e=1&a=1&c=54823&w=317&h=28&align=center"></iframe>
+                </td>
+                --访问量--
+                <td width="20%" align="left" valign="top" height="20px"> 
+                   <a class="wenzi" title="{$vo.title}" >  <font color="e5eef7">>>></font></a>当前访问量:<php>echo $totalvisit;</php></a>
+                   </br> <font color="e5eef7">>>></font>今日访问量:<php>echo $todayvisit;</php>
+                </td> 
+                <td width="10%" valign="top" height="20px">
+                    <a href="http://www.sinan.org.cn/fxjlm" class="wenzi">进入联盟</a></br><a href="http://www.sinan.org.cn/fxjlm" class="wenzi">     进入手机</a>
+                
+                </td>
+                <td width="30%" valign="top" height="20px">  
+                        --搜索框--
+                        <a class="wenzi" title="{$vo.title}"  href="/">首页&nbsp&nbsp</a><a class="wenzi" title="{$vo.title}"  href="#">&nbsp&nbsp设为首页&nbsp&nbsp</a><a class="wenzi" title="{$vo.title}"  href="{:U('Member/register')}">&nbsp&nbsp注册&nbsp&nbsp</a><a class="wenzi" title="{$vo.title}"  href="{:U('Member/login')}">&nbsp&nbsp登录 </a>
+
+                </td>
+    </tr> 
+</table>
+
+<!--原有顶部栏结束-->
+
+<!--新版本顶部栏结束-->
+<div class="head-v3">
+	<div class="navigation-up">
+		<div class="navigation-inner">
+			<div class="navigation-v3">
+				<ul>
+					<li class="homepage">
+						<h2>
+							<a>欢迎光临司南网</a>
+						</h2>
+					</li>
+                    <li class="" _t_nav="product">
+						<h2>
+							<img class="down_img" src="__TMPL__source/images/down.png"/><a href="http://www.16sucai.com">网站导航</a>
+						</h2>
+					</li>
+					<li class="" _t_nav="wechat">
+						<h2>
+							<a href="http://www.sinan.org.cn/fxjlm">民间反邪教联盟</a>
+						</h2>
+					</li>
+					<li class="" _t_nav="solution">
+						<h2>
+							<a href="http://sinan.org.cn/admin.php">登录</a>
+						</h2>
+					</li>
+					<li class="" _t_nav="cooperate">
+						<h2>
+							<a href="http://sinan.org.cn/index.php?s=/Member/register.html">注册</a>
+						</h2>
+					</li>
+					<li _t_nav="support">
+						
+						<h2>
+							<img class="phone_img" src="__TMPL__source/images/phone.png"/><a href="http://www.16sucai.com">联系我们</a>
+						</h2>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+	<div class="navigation-down">
+		<div id="product" class="nav-down-menu menu-1" style="display: none;" _t_nav="product">
+			<div class="navigation-down-inner">
+				<dl style="margin-left: 100px;">
+					<dt>司南科技</dt>
+					<dd>
+						<a hotrep="hp.header.product.compute1" href="http://sinan.org.cn/index.php?s=/lists/24.html">科学讲堂</a>
+					</dd>
+					<dd>
+						<a hotrep="hp.header.product.compute2" href="http://sinan.org.cn/index.php?s=/lists/23.html">科技前沿</a>
+					</dd>
+					<dd>
+						<a hotrep="hp.header.product.compute3" href="http://sinan.org.cn/index.php?s=/lists/62.html">科普在线</a>
+					</dd>
+				</dl>
+				<dl>
+					<dt>中小学教辅</dt>
+					<dd>
+						<a hotrep="hp.header.product.storage1" href="http://sinan.org.cn/index.php?s=/lists/64.html">中学生教辅</a>
+					</dd>
+					<dd>
+						<a hotrep="hp.header.product.storage2" href="http://sinan.org.cn/index.php?s=/lists/63.html">小学生教辅</a>
+					</dd>
+				</dl>
+				<dl>
+					<dt>健康指南</dt>
+					<dd>
+						<a hotrep="hp.header.product.monitoring1" href="http://sinan.org.cn/index.php?s=/lists/51.html">健康指南</a>
+					</dd>
+				</dl>
+				<dl>
+					<dt>司南专栏</dt>
+					<dd>
+						<a hotrep="hp.header.product.analysis1" href="http://sinan.org.cn/index.php?s=/lists/70.html">司南名家</a>
+					</dd>
+					<dd>
+						<a hotrep="hp.header.product.analysis2" href="http://sinan.org.cn/index.php?s=/lists/58.html">司南视角</a>
+					</dd>
+                    <dd>
+						<a hotrep="hp.header.product.analysis2" href="http://sinan.org.cn/index.php?s=/lists/60.html">司南微视</a>
+					</dd>
+                    <dd>
+						<a hotrep="hp.header.product.analysis2" href="http://sinan.org.cn/index.php?s=/lists/61.html">司南图库</a>
+					</dd>
+				</dl>
+				<dl>
+					<dt>司南文化</dt>
+					<dd>
+						<a hotrep="hp.header.product.devtool1" href="http://sinan.org.cn/index.php?s=/lists/15.html">每日一贴</a>
+					</dd>
+					<dd>
+						<a hotrep="hp.header.product.devtool2" href="http://sinan.org.cn/index.php?s=/lists/35.html">每周一展</a>
+					</dd>
+					<dd>
+						<a hotrep="hp.header.product.devtool3" href="http://sinan.org.cn/index.php?s=/lists/38.html">音乐在线</a>
+					</dd>
+                    <dd>
+						<a hotrep="hp.header.product.devtool3" href="http://sinan.org.cn/index.php?s=/lists/21.html">棋艺纵横</a>
+					</dd>
+                    <dd>
+						<a hotrep="hp.header.product.devtool3" href="http://sinan.org.cn/index.php?s=/lists/52.html">茶余饭后</a>
+					</dd>
+                    <dd>
+						<a hotrep="hp.header.product.devtool3" href="http://sinan.org.cn/index.php?s=/lists/65.html">四书五经</a>
+					</dd>
+                    <dd>
+						<a hotrep="hp.header.product.devtool3" href="http://sinan.org.cn/index.php?s=/lists/42.html">二十四史</a>
+					</dd>
+				</dl>
+				
+			</div>
+		</div>
+
+	</div>
+</div>
+<!--新版本顶部栏结束-->
+
+
+
+
+
+ <table width=962> 
+  <!--司南主题动画
+  <tr>
+<td><object classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=6,0,29,0" width="960" height="125">
+        <param name="movie" value="__TMPL__source/sntitle.swf">
+        <param name="wmode" value="transparent" />
+        <param name="quality" value="high"><param name="SCALE" value="noborder">
+        <embed src="__TMPL__source/sntitle.swf" width="960" height="125" quality="high" pluginspage="http://www.macromedia.com/go/getflashplayer" type="application/x-shockwave-flash" scale="noborder"  wmode="transparent"></embed>
+      </object></td>
+  </tr>-->
+  
+<img src="__TMPL__images/newtitle.gif"/>
+
+
+ </table> 
+
+ <!--焦点图
+<div class="film_focus">
+
+    <div class="film_focus_imgs_wrap">
+        <ul class="film_focus_imgs">
+            <li><a target="_blank" href="http://xn--6kr9n.com/index.php?s=/articles/1694.html"><img width="700" height="450" src="http://司南.com/Public/Uploads/thumb/thumb_1418612622.jpg" alt="赵孟頫《唐狄梁公碑》鉴赏" /></a></li>
+            <li><a target="_blank" href="http://xn--6kr9n.com/index.php?s=/articles/1701.html"><img width="700" height="450" src="http://司南.com/Public/Editor/attached/image/20141216/20141216071851_96492.jpg" alt="故宫附近“寺庙”藏私人会所 晚餐最低人均800元" /></a></li>
+            <li><a target="_blank" href="http://xn--6kr9n.com/index.php?s=/articles/1703.html"><img width="700" height="450" src="http://司南.com/Public/Editor/attached/image/20141216/20141216153152_64033.jpg" alt="占星术，一个美丽的错误（上）" /></a></li>
+            <li><a target="_blank" href="http://xn--6kr9n.com/index.php?s=/articles/1608.html"><img width="700" height="450" src="http://司南.com/Public/Editor/attached/image/20141203/20141203050521_71218.jpg" alt="赵孟頫《归去来辞》赏析" /></a></li>
+        </ul>
+    </div>
+        
+    <div class="film_focus_desc">
+        <h3赵孟頫《唐狄梁公碑》鉴赏/h3>
+        <ul class="film_focus_nav">
+            <li class="cur">
+                <a target="_blank" href="http://xn--6kr9n.com/index.php?s=/articles/1694.html"><img width="45" height="60" src="http://司南.com/Public/Uploads/thumb/thumb_1418612622.jpg" alt="赵孟頫《唐狄梁公碑》鉴赏
+" /></a>
+                <h4>赵孟頫《唐狄梁公碑》鉴赏</h4>
+            </li>
+            <li>
+                <a target="_blank" href="http://xn--6kr9n.com/index.php?s=/articles/1701.html"><img width="45" height="60" src="http://司南.com/Public/Editor/attached/image/20141216/20141216071851_96492.jpg"alt="故宫附近“寺庙”藏私人会所 晚餐最低人均800元" /></a>
+                <h4>故宫附近“寺庙”藏私人会所 晚餐最低人均800元</h4>
+
+            </li>
+            <li>
+                <a target="_blank" href="http://xn--6kr9n.com/index.php?s=/articles/1703.html"><img width="45" height="60" src="http://司南.com/Public/Editor/attached/image/20141216/20141216153152_64033.jpg" alt="占星术，一个美丽的错误（上）" /></a>
+                <h4>占星术，一个美丽的错误（上）</h4>
+
+            </li>
+            <li>
+                <a target="_blank" href="http://xn--6kr9n.com/index.php?s=/articles/1608.html"><img width="45" height="60" src="http://司南.com/Public/Editor/attached/image/20141203/20141203050521_71218.jpg" alt="赵孟頫《归去来辞》赏析"  /></a>
+                <h4>赵孟頫《归去来辞》赏析</h4>
+
+            </li>
+        </ul>
+    </div>
+    
+</div>       
+<script type="text/javascript">
+(function(A){
+    A.fn.th_video_focus=function(E){
+        
+        var G={
+            actClass:"cur",
+            navContainerClass:".focus_pic_preview",
+            focusContainerClass:".focus_pic",
+            animTime:600,
+            delayTime:5000
+        };
+        
+        if(E){
+            A.extend(G,E)
+        }
+        
+        var C=G.actClass, D=G.navContainerClass, B=G.focusContainerClass, F=G.animTime, H=G.delayTime, I=null;
+        
+        return this.each(function(){
+            
+            var O=A(this), M=A(D+" li",O), P=A(B+" li",O), L=M.length, K=O.height();
+            
+            function N(R){
+                var V=K*R*-1;
+                var U=A(B+" li",O), W=null, T=null;
+                for(var S=0;S<=R;S++){
+                    W=U.eq(S);
+                    T=W.find('script[type="text/templ"]');
+                    if(T.length>0){
+                        W.html(T.html())
+                    }
+                }
+                A(B,O).stop().animate({top:V},F,function(){
+                    var Y=O.find("h3"), X=Y.height();
+                    Y.height(0).html(A(B+" li").eq(R).find("img").attr("alt")).animate({height:X},600)
+                });
+                A(D+" li").eq(R).addClass(C).siblings().removeClass(C)
+            }
+            
+            function Q(){
+                if(I){
+                    clearInterval(I)
+                }
+                I=setInterval(function(){
+                    var R=A(D+" li."+C).index();
+                    N((R+1)%L)
+                },H)
+            }
+            
+            O.hover(function(){
+                if(I){
+                    clearInterval(I)
+                }
+            },function(){
+                Q()
+            });
+        
+            var J=null;
+            
+            M.hover(function(){
+                
+                var R=A(this).index();
+                
+                if(I){
+                    clearInterval(I)
+                }
+                J=setTimeout(function(){
+                    N(R)
+                },300)
+            },function(){
+                if(J){
+                    clearTimeout(J)
+                }
+                Q()
+            }).click(function(T){
+                var R=A(this).index(), S=P.eq(R).find("a");
+                if(document.uniqueID||window.opera){
+                    S[0].click();
+                    T.stopPropagation();
+                    T.preventDefault()
+                }
+            });
+            
+            Q()
+            
+        })
+    }
+    
+})(jQuery);
+
+$(function(){
+    
+    //第一个焦点图
+    $(".life_focus").th_video_focus({
+        navContainerClass:".life_focus_nav",
+        focusContainerClass:".life_focus_imgs"
+    });
+    
+    //第二个焦点图
+    $(".film_focus").th_video_focus({
+        navContainerClass:".film_focus_nav",
+        focusContainerClass:".film_focus_imgs",
+        delayTime:3000
+    });
+    
+});    
+</script>
+<!--焦点图END--> 
+      
+<!--加载左右广告条--> 
+<SCRIPT language="JavaScript">
+
+lastScrollY = 0;
+function heartBeat1(){
+var diffY;
+if (document.documentElement && document.documentElement.scrollTop)
+diffY = document.documentElement.scrollTop;
+else if (document.body)
+diffY = document.body.scrollTop
+else
+{/*Netscape stuff*/}
+alert(diffY);
+percent=.1*(diffY-lastScrollY);
+if(percent>0)percent=Math.ceil(percent);
+else percent=Math.floor(percent);
+document.getElementById("leftDiv").style.top = parseInt(document.getElementById("leftDiv").style.top)+percent+"px";
+document.getElementById("rightDiv").style.top = parseInt(document.getElementById("rightDiv").style.top)+percent+"px";
+lastScrollY=lastScrollY+percent;
+//alert(lastScrollY);
+}
+//下面这段删除后，对联将不跟随屏幕而移动。
+//window.setInterval("heartBeat1()",1);
+//
+//关闭按钮
+function close_left1(){
+    left1.style.visibility='hidden';
+}
+function close_left2(){
+    left2.style.visibility='hidden';
+}
+function close_right1(){
+    right1.style.visibility='hidden';
+}
+function close_right2(){
+    right2.style.visibility='hidden';
+}
+//显示样式
+document.writeln("<style type=\"text\/css\">");
+document.writeln("#leftDiv,#rightDiv{width:100px;height:300px;background-color:#fff;position:absolute;z-index:1000;}");
+document.writeln(".itemFloat{width:100px;height:300px;line-height:5px}");
+document.writeln("<\/style>");
+//以下为主要内容
+document.writeln("<div id=\"leftDiv\" style=\"top:40px;left:5px\">");
+//------左侧各块开始
+//---L2
+document.writeln("<div id=\"left2\" class=\"itemFloat\">");
+document.writeln("<a target=_blank href=http://www.sdxzlawyer.com/><img border=0 src=__TMPL__images/left_new.jpg></a>");
+document.writeln("<br><a href=\"javascript:close_left2();\" title=\"关闭上面的广告\">×<\/a>");
+document.writeln("<\/div>");
+//------左侧各块结束
+document.writeln("<\/div>");
+document.writeln("<div id=\"rightDiv\" style=\"top:40px;right:5px\">");
+//------右侧各块结束
+//---R2
+document.writeln("<div id=\"right2\" class=\"itemFloat\">");
+document.writeln("<a target=_blank><img border=0 src=__TMPL__images/right_new.gif></a>");
+document.writeln("<br><a href=\"javascript:close_right2();\" title=\"关闭上面的广告\">×<\/a>");
+document.writeln("<\/div>");
+//------右侧各块结束
+document.writeln("<\/div>");
+</SCRIPT>
+
+
+
+  <!--公告栏跑马灯
+<table width=960px>
+<tr valign="middle">
+<td width="100px" align="center">
+<a class="wenzi" title="{$vo.title}" ><font color="red">===公  告  栏===</font></a>
+</td>
+         <td>
+         
+         <arclist model="ad" where=""  num="1" order="set_time desc">
+            <marquee scrollamount=2 width=600 behavior=alternate direction=left align=middle border=1>{$vo.content}!</marquee>
+         </arclist>
+      </td>
+</tr>
+</table>
+-->
+
+<div align="center">
+
+
+
+ <!-- 并排三个动画
+ <table class="bigtable">
+ <tr>
+ <td class="lanmu1">-->
+               <!--科普动画
+      <object  classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" codebase="http://fpdownload.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=8,0,0,0" width="250" height="60">
+  <param name="movie" value="/Web/Tpl/xinwen/source/righttitle.swf" />
+  <param name="quality" value="high" />
+  <param name="allowScriptAccess" value="always" />
+  <param name="wmode" value="transparent">
+     <embed src="/Web/Tpl/xinwen/source/righttitle.swf"
+      quality="high"
+      type="application/x-shockwave-flash"
+      WMODE="transparent"
+      width="250"
+      height="60"
+      pluginspage="http://www.macromedia.com/go/getflashplayer"
+      allowScriptAccess="always" />
+</object>
+        
+ </td>
+ <td class="lanmu2">-->
+       <!--司南名家动画
+
+<object classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" codebase="http://fpdownload.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=8,0,0,0" width="450" height="60">
+  <param name="movie" value="__TMPL__source/snmj.swf" />
+  <param name="quality" value="high" />
+  <param name="allowScriptAccess" value="always" />
+  <param name="wmode" value="transparent">
+     <embed src="__TMPL__source/snmj.swf"
+      quality="high"
+      type="application/x-shockwave-flash"
+      WMODE="transparent"
+      width="450"
+      height="60"
+      pluginspage="http://www.macromedia.com/go/getflashplayer"
+      allowScriptAccess="always" />
+</object>
+ </td>
+ <td class="lanmu1">-->
+      <!--四书五经史动画
+          <object classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" codebase="http://fpdownload.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=8,0,0,0" width="250" height="60">
+              <param name="movie" value="__TMPL__source/sswj.swf" />
+              <param name="quality" value="high" />
+              <param name="allowScriptAccess" value="always" />
+              <param name="wmode" value="transparent">
+              <embed src="__TMPL__source/sswj.swf"
+                     quality="high"
+                     type="application/x-shockwave-flash"
+                     WMODE="transparent"
+                     width="250"
+                     height="60"
+                     pluginspage="http://www.macromedia.com/go/getflashplayer"
+                     allowScriptAccess="always" />
+          </object>
+ </td>
+ </tr>
+</table>-->
+<!--原版首页幻灯
+
+         <div id="IndexFlash" <neq name="config.ishomeimg" value="0">style="visibility:hidden;"</neq>>
+		 <neq name="config.ishomeimg" value="0">
+		 <volist name="flash" id="vo">
+		 <a href="{$vo.url}" target="_blank"><img src="__ROOT__{$vo.imgurl}" alt="{$vo.title}" width="300" height="280"/></a>
+		 </volist>
+		<else/>{:Ad(27);}
+		 </neq>
+		 </div>
+-->
+
+<!--首页幻灯开始 -->
+
+
+<div class="banner_kj">
+
+	<div class="banner">
+	  <div class=" jcarousel-skin-index">
+	    <div class="jcarousel-container jcarousel-container-horizontal">
+	      <div class="jcarousel-clip jcarousel-clip-horizontal">
+	        <ul id="index-hero-carousel" class="jcarousel-list jcarousel-list-horizontal">
+	  <li jcarouselindex="1" class="jcarousel-item jcarousel-item-horizontal jcarousel-item-1 jcarousel-item-1-horizontal"> <a href="http://xn--6kr9n.com/index.php?s=/articles/1694.html"><img width=280px height=200px src="http://司南.com/Public/Uploads/thumb/thumb_1418612622.jpg" ></a></li>
+	  <li jcarouselindex="2" class="jcarousel-item jcarousel-item-horizontal jcarousel-item-2 jcarousel-item-2-horizontal"> <a href="http://xn--6kr9n.com/index.php?s=/articles/1701.html"><img width=280px height=200px src="http://司南.com/Public/Editor/attached/image/20141216/20141216071851_96492.jpg"></a> </li>
+	  <li jcarouselindex="3" class="jcarousel-item jcarousel-item-horizontal jcarousel-item-3 jcarousel-item-3-horizontal"> <a href="http://xn--6kr9n.com/index.php?s=/articles/1703.html"><img width=280px height=200px src="http://司南.com/Public/Editor/attached/image/20141216/20141216153152_64033.jpg"></a> </li>
+	  <li jcarouselindex="4" class="jcarousel-item jcarousel-item-horizontal jcarousel-item-4 jcarousel-item-4-horizontal"> <a href="http://xn--6kr9n.com/index.php?s=/articles/1608.html"><img width=280px height=200px src="http://司南.com/Public/Editor/attached/image/20141203/20141203050521_71218.jpg"></a> </li>
+	        </ul>
+	      </div>
+	    </div>
+	  </div>
+	  <ul id="index-hero-control" class="control-index-hero">
+	    <li> <a href="http://xn--6kr9n.com/index.php?s=/articles/1694.html" class="index-hero-number">1</a><a href="http://xn--6kr9n.com/index.php?s=/articles/1694.html" target="_blank">赵孟頫《唐狄梁公碑》鉴赏</a> </li>
+	    <li> <a href="http://xn--6kr9n.com/index.php?s=/articles/1701.html" class="index-hero-number">2</a><a href="http://xn--6kr9n.com/index.php?s=/articles/1701.html" target="_blank">故宫附近“寺庙”藏私人会所 晚餐...</a> </li>
+	    <li> <a href="http://xn--6kr9n.com/index.php?s=/articles/1703.html" class="index-hero-number">3</a><a href="http://司南.com/Public/Editor/attached/image/20141216/20141216153152_64033.jpg">占星术，一个美丽的错误（上）</a> </li>
+	    <li> <a href="http://xn--6kr9n.com/index.php?s=/articles/1608.html" class="index-hero-number">4</a><a href="http://www.lanrenzhijia.com" target="_blank">赵孟頫《归去来辞》赏析</a> </li>
+	  </ul>
+	</div>
+	<script src="__TMPL__source/js/jquery-1.4.2.min.js"></script>
+	<script src="__TMPL__source/js/jCarousel.js"></script>
+	<script src="__TMPL__source/js/lanrenzhijia.js"></script>
+
+	<div class="banner_center">
+		<ul>
+			<li><a href="">浅谈反邪教信息网络队伍和体系建设</a></li>
+			<li><a href="">加强公众科学素质培养 构建社会主义和谐社会</a></li>
+			<li><a href="">写给节日值班的我 </a></li>
+			<li><a href="">日出初光先照</a></li>
+			<li><a href="">反邪教警示教育关键在一“常”字</a></li>
+			<li><a href="">警惕打着基督教旗帜的邪教组织：全能神</a></li>
+			<li><a href="">邪教“呼喊派”与基督教的区别</a></li>
+		</ul>
+	</div>
+	
+	<div class="banner_right">
+		
+		<ul class="banner_right_t"><span>民间反邪教联盟</span>
+		
+		<div style="clear:both"></div>
+		</ul>
+		
+		<ul class="banner_right_b">
+			<li><span>联盟论坛：</span><a href="">工作动态</a><a href="">媒体报道</a><a href="">邪性曝光</a><a href="">理论研究</a><a href="">关爱天地</a><a href="">示范创建</a><a href="">政策法规</a></li>
+			<li><span>联盟视角：</span><a href="">兴震律师</a><a href="">齐克专栏</a><a href="">修成文专栏</a><a href="">古云专栏</a><a href="">青啤专栏</a><a href="">黄河专栏</a><a href="">厚德专栏</a></li>
+			<li><span>联盟社区：</span><a href="">传统文化</a><a href="">科学普及</a><a href="">精彩生活</a><a href="">论文书籍</a><a href="">视频资料</a><a href="">漫画图库</a></li>
+			<li><span>推荐频道：</span><a href="">济南社区</a><a href="">青岛社区</a><a href="">淄博社区</a><a href="">枣庄社区</a><a href="">烟台社区</a></li>
+			
+			<div style="clear:both"></div>
+		</ul>
+		
+	</div>
+
+	<div style="clear:both"></div>
+
+
+</div>
+
+
+
+
+
+
+
+<!----End-->
+
+
+
+
+
+<table width="955px"  border="0"  cellpadding="0" cellspacing="4">
+<!--
+ <tr>
+
+ <td class="lanmu1" valign="top" >
+       <div id="science-class">
+	  <m1>科学讲堂</m1>
+	  <m2><a href="#">更多</a></m2>
+	  </div>
+</td>
+</tr>
+</table>
+<table width="955px"  border="0" align="center" cellpadding="0" cellspacing="4">
+
+<tr>
+   <div id="content-box">
+ 				<div class="grey-box">
+					<h3><php>echo getTypeName(24);</php></h3>
+					 <arclist model='article' where="typeid in(24)" order='addtime desc' num='1' id='vo'>
+					 <img src="{$vo.imgurl}" alt="{$vo.title}" width="120" height="64">
+					 </arclist> 
+					<p>
+					   {$vo.note|msubstr=###,0,36}<a href="{$vo.aid|url=articles,###} class="button">[详细]</a>
+
+					 </p>
+				</div>
+ 				<div class="grey-box1">
+					<h3><php>echo getTypeName(70);</php></h3>
+					<a href="#"><img src="css/images/main-1.jpg" alt="" /></a>
+					<p>
+						<span>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur elementum, odio tincidunt egestas</span>
+						<a href="#" class="button">Read more</a>
+					 </p>
+				</div>
+ 				<div class="grey-box2">
+					<h3><a href="#">Lorem ipsum dolor sit amet.</a></h3>
+					<a href="#"><img src="css/images/main-1.jpg" alt="" /></a>
+					<p>
+						<span>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur elementum, odio tincidunt egestas</span>
+						<a href="#" class="button">Read more</a>
+					 </p>
+				</div>
+	</div>
+</tr>
+-->
+ <tr>
+
+ <td class="lanmu1" valign="top" >
+
+<!--
+ <table cellspacing="0" cellpadding="0" width="250" border="0" class="titbg" style="margin-top:5px">
+        <tr>
+          <td width="33"><img width="33" height="30" src="__TMPL__images/tit_zuo.gif" /></td>
+          <td class="14_lan" width="207"><php>echo getTypeName(24);</php></td>
+          <td width="57"><a href="file.asp"><font color="#2f6a9c">更多&gt;&gt;</font></a></td>
+          <td width="3"><img width="3" height="30" src="__TMPL__images/tit_you.gif" /></td>
+        </tr>
+  </table>
+      <table class="bk" cellspacing="0" cellpadding="0" width="250" border="0">
+	       <tr valign="top">
+        <arclist model='article' where="typeid in(24)" order='addtime desc' num='1' id='vo'>
+            <td width="130">           
+                      <a class="wenzi" title="{$vo.title}"  href="{$vo.aid|url=articles,###}" >
+                      <img src="{$vo.imgurl}" alt="{$vo.title}" width="120" height="64">
+                      </a>
+            </td>
+             <td align="left">
+             <p>{$vo.note|msubstr=###,0,36}<a class="wenzi" title="{$vo.title}"  href="{$vo.aid|url=articles,###}">[详细]</a></p>
+             </td>
+       </arclist> 
+    </tr> 
+        <tr>
+          <td class="index_content" colspan="2" height="198" valign="top" class="zpj" id="rdwt">
+		  <table cellspacing="0" cellpadding="0" width="100%" border="0">
+		  	              
+            <arclist model='article' where="typeid in(24)" order='addtime desc' num='3' id='vo'>
+            <tr>
+                  <td class="index_content" align="left" colspan="4">  <a class="wenzi" title="{$vo.title}"  href="{$vo.aid|url=articles,###}">☆{$vo.title}</a> </td> 
+            </tr>  
+            </arclist>  
+           
+          </table>
+		  </td>
+        </tr>
+      </table>--> 
+
+ <!--科学讲堂 开始--> 
+
+
+  <div class="vanfonbox_left"><div class="toptitle">
+ <span class="title">
+ <php>echo getTypeName(24);</php></span>
+ <span class="more"><a class="wenzi" title="{$vo.title|msubstr=###,0,16}"  href='/index.php?s=/lists/24.html'>更多 &raquo;</a></span>
+ </div>
+ <ul>
+  <arclist model='article' where="typeid in(24)" order='addtime desc' num='1' id='vo'>
+  <li class="pic_txt">
+   <a class="wenzi" title="{$vo.title}"  href="{$vo.aid|url=articles,###}" >
+                      <img src="{$vo.imgurl}" alt="{$vo.title}" width="120" height="80">
+                      </a>
+  <p>{$vo.note|msubstr=###,0,36}<a class="wenzi" title="{$vo.title}"  href="{$vo.aid|url=articles,###}">[详细]</a></p>
+  </li>
+   </arclist> 
+<arclist model='article' where="typeid in(24)" order='addtime desc' num='3' id='vo'>
+<li class="normal"><a class="wenzi" title="{$vo.title}"  href="{$vo.aid|url=articles,###}"><img src="__TMPL__images/dot.png" width="5" height="5">{$vo.title|msubstr=###,0,16}</a></li>
+ </arclist> 
+ </ul>
+
+ </div>
+
+
+   <div class="vanfonbox_left"><div class="toptitle bga">
+ <span class="title"><php>echo getTypeName(23);</php></span>
+ <span class="more"><a class="wenzi" title="{$vo.title}"  href='/index.php?s=/lists/23.html'>更多 &raquo;</a></span>
+ </div>
+ <ul>
+  <arclist model='article' where="typeid in(23)" order='addtime desc' num='1' id='vo'>
+  <li class="pic_txt">
+   <a class="wenzi" title="{$vo.title}"  href="{$vo.aid|url=articles,###}" >
+                      <img src="{$vo.imgurl}" alt="{$vo.title}" width="120" height="80">
+                      </a>
+  <p>{$vo.note|msubstr=###,0,36}<a class="wenzi" title="{$vo.title}"  href="{$vo.aid|url=articles,###}">[详细]</a></p>
+  </li>
+   </arclist> 
+<arclist model='article' where="typeid in(23)" order='addtime desc' num='3' id='vo'>
+<li class="normal"><a class="wenzi" title="{$vo.title}"  href="{$vo.aid|url=articles,###}"><img src="__TMPL__images/dot.png" width="5" height="5">{$vo.title|msubstr=###,0,16}</a></li>
+ </arclist> 
+ </ul>
+
+ </div>
+
+             
+ </td>
+ <td class="lanmu2" valign="top">
+
+<style>
+.vanfonbox_center{ width:381px;height:486px;margin-left:3px;border:1px solid #c9c9c9; -moz-box-shadow: 0 1px 2px #d3d3d3;
+-webkit-box-shadow: 0 1px 2px #d3d3d3;
+box-shadow: 0 1px 2px #d3d3d3;background-color:#fcfcfc;}
+
+.vanfonbox_center .toptitle{ background: url(/Public/image/index_titbg03.jpg) repeat-x -1px -1px;height:35px;}
+
+ .vanfonbox_center .toptitle .title{
+ text-align:left;
+  background:url(/Web/Tpl/xinwen/images/chabei.jpg) no-repeat 3px center;
+ width:180px;height:31px;line-height:31px;padding-left:35px;
+font-size: 14px;
+float: left;
+font-weight:700;
+color:#FF9900;
+}
+
+ .vanfonbox_center .toptitle .more{margin: 5px 5px 5px 15px;
+font-size: 14px;
+float: right;}
+
+ .vanfonbox_center .toptitle .more a{color: #999;background: none;}
+ 
+ .vanfonbox_center .toptitle .more a:hover{color:red;}
+
+ .vanfonbox_center ul img {
+padding:10px 10px 10px 10px;
+float:left;
+}
+
+.vanfonbox_center ul{
+padding-bottom: 10px;
+float: left;
+}
+ .vanfonbox_center ul p {
+padding:10px 10px 10px 0px;
+float:right;
+width:120px;
+font-size:14px;
+}
+
+.vanfonbox_center ul p a.wenzi{
+font-size:14px;
+}
+ .vanfonbox_center ul li.normal{
+ width:340px;text-overflow:ellipsis;white-space:nowrap;overflow:hidden;
+ font-size:14px;
+margin: 10px 10px 0px 10px;
+text-align:left;
+}
+ .vanfonbox_center ul li.li4{
+ float:left;
+ font-size:14px;
+margin: 10px 10px 0px 10px;
+}
+
+ .vanfonbox_center ul li.normal a{
+color:#333;
+text-decoration: blink;
+line-height: 24px;
+}
+</style>
+ 
+   <div class="vanfonbox_center"><div class="toptitle">
+ <span class="title"><php>echo getTypeName(70);</php></span>
+ <span class="more"><a class="wenzi" title="{$vo.title}"  href='/index.php?s=/lists/70.html'>更多 &raquo;</a></span>
+ </div>
+ <ul>
+  <arclist model='type' where="typeid gt (70)" order='typeid asc' num='4' id='vo'>
+  <li class="li4">
+  <a class="wenzi" title="{$vo.title}"  href="/index.php?s=/lists/{$vo.typeid}.html"><font color="red">◎</font>{$vo.typename}</a>
+  </li> 
+  </arclist> 
+  <arclist model='type' where="typeid gt (74)" order='typeid asc' num='4' id='vo'>
+  <li class="li4">
+  <a class="wenzi" title="{$vo.title}"  href="/index.php?s=/lists/{$vo.typeid}.html"><font color="red">◎</font>{$vo.typename}</a>
+  </li> 
+  </arclist> 
+  <arclist model='type' where="typeid gt (78)" order='typeid asc' num='4' id='vo'>
+  <li class="li4">
+  <a class="wenzi" title="{$vo.title}"  href="/index.php?s=/lists/{$vo.typeid}.html"><font color="red">◎</font>{$vo.typename}</a>
+  </li> 
+  </arclist> 
+  <arclist model='type' where="typeid gt (82)" order='typeid asc' num='4' id='vo'>
+  <li class="li4">
+  <a class="wenzi" title="{$vo.title}"  href="/index.php?s=/lists/{$vo.typeid}.html"><font color="red">◎</font>{$vo.typename}</a>
+  </li> 
+  </arclist> 
+  </ul>
+  <ul>
+  
+<arclist model='article' where="typeid gt (70)" order='addtime desc' num='9' id='vo'>
+<li class="normal">
+ <a class="wenzi" title="{$vo.title}"  href="{$vo.aid|url=articles,###}"><font color="red"><img src="__TMPL__images/dot.png" width="5" height="5"></font>{$vo.title|msubstr=###,0,36}</a>
+</li>
+ </arclist> 
+ </ul>
+
+ </div>
+        <!--司南名家结束 15,35,-->
+ </td>
+
+ <td class="lanmu1" valign="top">
+
+  <div class="vanfonbox_left"><div class="toptitle">
+ <span class="title"><php>echo getTypeName(15);</php></span>
+ <span class="more"><a class="wenzi" title="{$vo.title}"  href='/index.php?s=/lists/15.html'>更多 &raquo;</a></span>
+ </div>
+ <ul>
+  <arclist model='article' where="typeid in(15)" order='addtime desc' num='1' id='vo'>
+  <li class="pic_txt">
+   <a class="wenzi" title="{$vo.title}"  href="{$vo.aid|url=articles,###}" >
+                      <img src="{$vo.imgurl}" alt="{$vo.title}" width="120" height="80">
+                      </a>
+  <p>{$vo.note|msubstr=###,0,36}<a class="wenzi" title="{$vo.title}"  href="{$vo.aid|url=articles,###}">[详细]</a></p>
+  </li>
+   </arclist> 
+<arclist model='article' where="typeid in(15)" order='addtime desc' num='3' id='vo'>
+<li class="normal"><a class="wenzi" title="{$vo.title}"  href="{$vo.aid|url=articles,###}"><img src="__TMPL__images/dot.png" width="5" height="5">{$vo.title|msubstr=###,0,16}</a></li>
+ </arclist> 
+ </ul>
+
+ </div>
+<!--书画名家结束--> 
+    <div class="vanfonbox_left"><div class="toptitle bga">
+ <span class="title"><php>echo getTypeName(35);</php></span>
+ <span class="more"><a class="wenzi" title="{$vo.title}"  href='/index.php?s=/lists/35.html'>更多 &raquo;</a></span>
+ </div>
+ <ul>
+  <arclist model='article' where="typeid in(35)" order='addtime desc' num='1' id='vo'>
+  <li class="pic_txt">
+   <a class="wenzi" title="{$vo.title}"  href="{$vo.aid|url=articles,###}" >
+                      <img src="{$vo.imgurl}" alt="{$vo.title}" width="120" height="80">
+                      </a>
+  <p>{$vo.note|msubstr=###,0,36}<a class="wenzi" title="{$vo.title}"  href="{$vo.aid|url=articles,###}">[详细]</a></p>
+  </li>
+   </arclist> 
+<arclist model='article' where="typeid in(35)" order='addtime desc' num='3' id='vo'>
+<li class="normal"><a class="wenzi" title="{$vo.title}"  href="{$vo.aid|url=articles,###}"><img src="__TMPL__images/dot.png" width="5" height="5">{$vo.title|msubstr=###,0,16}</a></li>
+ </arclist> 
+ </ul>
+
+ </div>       
+
+  
+ </td>
+<!--书画名家结束--> 
+ </tr>
+
+
+</table>
+<!--------------->
+<table width="955px" border="0" cellpadding="0" cellspacing="4">
+ <tr>
+ <td class="lanmu1" valign="top">
+  <div class="vanfonbox_left"><div class="toptitle bgb">
+ <span class="title"><php>echo getTypeName(62);</php></span>
+ <span class="more"><a class="wenzi" title="{$vo.title}"  href='/index.php?s=/lists/62.html'>更多 &raquo;</a></span>
+ </div>
+ <ul>
+  <arclist model='article' where="typeid in(62)" order='addtime desc' num='1' id='vo'>
+  <li class="pic_txt">
+   <a class="wenzi" title="{$vo.title}"  href="{$vo.aid|url=articles,###}" >
+                      <img src="{$vo.imgurl}" alt="{$vo.title}" width="120" height="80">
+                      </a>
+  <p>{$vo.note|msubstr=###,0,36}<a class="wenzi" title="{$vo.title}"  href="{$vo.aid|url=articles,###}">[详细]</a></p>
+  </li>
+   </arclist> 
+<arclist model='article' where="typeid in(62)" order='addtime desc' num='3' id='vo'>
+<li class="normal"><a class="wenzi" title="{$vo.title}"  href="{$vo.aid|url=articles,###}"><img src="__TMPL__images/dot.png" width="5" height="5">{$vo.title|msubstr=###,0,16}</a></li>
+ </arclist> 
+ </ul>
+
+ </div>
+ </td>
+ <td class="lanmu2" valign="top" style="width:386px;">
+        <!--司南视角开始 58,59-->
+         <div class="vanfonbox_center" style="height:236px;"><div class="toptitle">
+ <span class="title"><php>echo getTypeName(58);</php></span>
+ <span class="more"><a class="wenzi" title="{$vo.title}"  href='/index.php?s=/lists/58.html'>更多 &raquo;</a></span>
+ </div>
+
+  <ul>
+<arclist model='article' where="typeid in(58)" order='addtime desc' num='5' id='vo'>
+<li class="normal">
+ <a class="wenzi" title="{$vo.title}"  href="{$vo.aid|url=articles,###}"><img src="__TMPL__images/dot.png" width="5" height="5">{$vo.title|msubstr=###,0,36}</a>
+</li>
+ </arclist> 
+ </ul>
+
+ </div>
+
+         
+        <!--司南热帖结束-->
+ </td>
+ <td class="lanmu1" valign="top">
+
+  <div class="vanfonbox_left"><div class="toptitle bgb">
+ <span class="title"><php>echo getTypeName(38);</php></span>
+ <span class="more"><a class="wenzi" title="{$vo.title}"  href='/index.php?s=/lists/38.html'>更多 &raquo;</a></span>
+ </div>
+ <ul>
+  
+  <li class="pic_txt" style="margin-left:10px;">
+   <object type="application/x-shockwave-flash" data="__TMPL__source/mp3player/dewplayer-playlist.swf" width="260" height="86" id="dewplayer" name="dewplayer">
+                 <param name="wmode" value="transparent" />
+                 <param name="movie" value="__TMPL__source/mp3player/dewplayer-playlist.swf" />
+                 <param name="flashvars" value="showtime=true&autoreplay=true&xml=__TMPL__source/playlist.xml" />
+  </object>
+  </li>
+   
+<arclist model='article' where="typeid in(38)" order='addtime desc' num='3' id='vo'>
+<li class="normal"><a class="wenzi" title="{$vo.title}"  href="{$vo.aid|url=articles,###}"><img src="__TMPL__images/dot.png" width="5" height="5">{$vo.title|msubstr=###,0,16}</a></li>
+ </arclist> 
+ </ul>
+
+ </div>
+
+
+         
+
+ </td>
+<!--音乐在线结束--> 
+ </tr> 
+ 
+ 
+ 
+
+ </table>
+
+<table width="955px" border="0"  cellpadding="0" cellspacing="4">
+ <tr>
+<!--中小学教辅开始-->
+ <td class="lanmu1" valign="top">
+
+  <div class="vanfonbox_left"><div class="toptitle">
+ <span class="title">中小学教辅</span>
+ <span class="more"><a class="wenzi" title="{$vo.title}"  href='/index.php?s=/lists/63.html'>更多 &raquo;</a></span>
+ </div>
+  <ul>
+  <arclist model='article' where="typeid in(63)" order='addtime desc' num='1' id='vo'>
+  <li class="pic_txt">
+   <a class="wenzi" title="{$vo.title}"  href="{$vo.aid|url=articles,###}" >
+                      <img src="{$vo.imgurl}" alt="{$vo.title}" width="120" height="85">
+                      </a>
+  <p>{$vo.note|msubstr=###,0,36}<a class="wenzi" title="{$vo.title}"  href="{$vo.aid|url=articles,###}">[详细]</a></p>
+  </li>
+   </arclist> 
+
+
+  
+<arclist model='article' where="typeid in(63)" order='addtime desc' num='5' id='vo'>
+<li class="normal">
+ <a class="wenzi" title="{$vo.title}"  href="{$vo.aid|url=articles,###}"><img src="__TMPL__images/dot.png" width="5" height="5">{$vo.title|msubstr=###,0,36}</a>
+</li>
+ </arclist> 
+ <arclist model='article' where="typeid in(64)" order='addtime desc' num='5' id='vo'>
+<li class="normal">
+ <a class="wenzi" title="{$vo.title}"  href="{$vo.aid|url=articles,###}"><img src="__TMPL__images/dot.png" width="5" height="5">{$vo.title|msubstr=###,0,36}</a>
+</li>
+ </arclist> 
+ </ul>
+
+ </div>
+ </td>
+<!--小学教辅结束-->
+
+
+ <!--小学教辅开始
+ <td class="lanmu1" valign="top">
+
+  
+  <div class="vanfonbox_left"><div class="toptitle">
+ <span class="title"><img src="__TMPL__images/arrowhead_right.png" width="15" height="15"><php>echo getTypeName(63);</php></span>
+ <span class="more"><a class="wenzi" title="{$vo.title}"  href='/index.php?s=/lists/63.html'>更多 &raquo;</a></span>
+ </div>
+ <ul>
+  <arclist model='article' where="typeid in(63)" order='addtime desc' num='1' id='vo'>
+  <li class="pic_txt">
+   <a class="wenzi" title="{$vo.title}"  href="{$vo.aid|url=articles,###}" >
+                      <img src="{$vo.imgurl}" alt="{$vo.title}" width="120" height="80">
+                      </a>
+  <p>{$vo.note|msubstr=###,0,36}<a class="wenzi" title="{$vo.title}"  href="{$vo.aid|url=articles,###}">[详细]</a></p>
+  </li>
+   </arclist> 
+<arclist model='article' where="typeid in(63)" order='addtime desc' num='3' id='vo'>
+<li class="normal"><a class="wenzi" title="{$vo.title}"  href="{$vo.aid|url=articles,###}">☆{$vo.title|msubstr=###,0,16}</a></li>
+ </arclist> 
+
+    </arclist> 
+
+<arclist model='article' where="typeid in(64)" order='addtime desc' num='3' id='vo'>
+<li class="normal"><a class="wenzi" title="{$vo.title}"  href="{$vo.aid|url=articles,###}">☆{$vo.title|msubstr=###,0,16}</a></li>
+ </ul>
+ </arclist> 
+ </div>
+  <!--小学教辅结束-->  
+ <!--中学教辅开始  
+<div class="vanfonbox_left">
+<div class="toptitle bga">
+ <span class="title"<img src="__TMPL__images/arrowhead_right(1).png" width="15" height="15">><php>echo getTypeName(64);</php></span>
+ <span class="more"><a class="wenzi" title="{$vo.title}"  href='/index.php?s=/lists/64.html'>更多 &raquo;</a></span>
+ </div>
+ <ul>
+  <arclist model='article' where="typeid in(64)" order='addtime desc' num='1' id='vo'>
+  <li class="pic_txt">
+   <a class="wenzi" title="{$vo.title}"  href="{$vo.aid|url=articles,###}" >
+                      <img src="{$vo.imgurl}" alt="{$vo.title}" width="120" height="80">
+                      </a>
+  <p>{$vo.note|msubstr=###,0,36}<a class="wenzi" title="{$vo.title}"  href="{$vo.aid|url=articles,###}">[详细]</a></p>
+  </li>
+   </arclist> 
+<arclist model='article' where="typeid in(64)" order='addtime desc' num='3' id='vo'>
+<li class="normal"><a class="wenzi" title="{$vo.title}"  href="{$vo.aid|url=articles,###}">☆{$vo.title|msubstr=###,0,16}</a></li>
+ </arclist> 
+ </ul>
+ </div>
+
+ 
+           
+ </td>
+ <!--中学教辅结束--> 
+ <!--司南微视开始--> 
+ <td class="lanmu2" valign="top">
+
+  <div class="vanfonbox_center"><div class="toptitle">
+ <span class="title"><php>echo getTypeName(60);</php></span>
+ <span class="more"><a class="wenzi" title="{$vo.title}"  href='/index.php?s=/lists/60.html'>更多 &raquo;</a></span>
+ </div>
+ <ul>
+  <li class="li4">
+  <a class="wenzi" title="{$vo.title}"  href="http://sinan.org.cn/index.php?s=/articles/890.html" >
+                      <img src="http://sinan.org.cn/web/tpl/xinwen/images/sinanweish.jpg" alt="{$vo.title}" width="340" height="220">
+                      </a>
+  </li> 
+  
+  </ul>
+  <ul>
+  
+<arclist model='article' where="typeid in(60)" order='addtime desc' num='5' id='vo'>
+<li class="normal">
+ <a class="wenzi" title="{$vo.title}"  href="{$vo.aid|url=articles,###}"><img src="__TMPL__images/dot.png" width="5" height="5">{$vo.title|msubstr=###,0,36}</a>
+</li>
+ </arclist> 
+ </ul>
+
+ </div>
+ </td>
+        <!--司南微视结束-->
+ <!--棋艺纵横开始--> 
+  <td class="lanmu1" valign="top">
+ 
+<div class="vanfonbox_left">
+<div class="toptitle">
+ <span class="title"><php>echo getTypeName(21);</php></span>
+ <span class="more"><a class="wenzi" title="{$vo.title}"  href='/index.php?s=/lists/21.html'>更多 &raquo;</a></span>
+ </div>
+ <ul>
+  <arclist model='article' where="typeid in(21)" order='addtime desc' num='1' id='vo'>
+  <li class="pic_txt">
+   <a class="wenzi" title="{$vo.title}"  href="{$vo.aid|url=articles,###}" >
+                      <img src="{$vo.imgurl}" alt="{$vo.title}" width="120" height="80">
+                      </a>
+  <p>{$vo.note|msubstr=###,0,36}<a class="wenzi" title="{$vo.title}"  href="{$vo.aid|url=articles,###}">[详细]</a></p>
+  </li>
+   </arclist> 
+<arclist model='article' where="typeid in(21)" order='addtime desc' num='3' id='vo'>
+<li class="normal"><a class="wenzi" title="{$vo.title}"  href="{$vo.aid|url=articles,###}"><img src="__TMPL__images/dot.png" width="5" height="5">{$vo.title|msubstr=###,0,16}</a></li>
+ </arclist> 
+ </ul>
+ </div>
+
+
+<div class="vanfonbox_left">
+<div class="toptitle">
+ <span class="title"><php>echo getTypeName(52);</php></span>
+ <span class="more"><a class="wenzi" title="{$vo.title}"  href='/index.php?s=/lists/52.html'>更多 &raquo;</a></span>
+ </div>
+ <ul>
+  <arclist model='article' where="typeid in(52)" order='addtime desc' num='1' id='vo'>
+  <li class="pic_txt">
+   <a class="wenzi" title="{$vo.title}"  href="{$vo.aid|url=articles,###}" >
+                      <img src="{$vo.imgurl}" alt="{$vo.title}" width="120" height="80">
+                      </a>
+  <p>{$vo.note|msubstr=###,0,36}<a class="wenzi" title="{$vo.title}"  href="{$vo.aid|url=articles,###}">[详细]</a></p>
+  </li>
+   </arclist> 
+<arclist model='article' where="typeid in(52)" order='addtime desc' num='3' id='vo'>
+<li class="normal"><a class="wenzi" title="{$vo.title}"  href="{$vo.aid|url=articles,###}"><img src="__TMPL__images/dot.png" width="5" height="5">{$vo.title|msubstr=###,0,16}</a></li>
+ </arclist> 
+ </ul>
+ </div>
+           
+ </td> 
+ </tr> 
+</table>
+
+
+
+<table width="955px" border="0" cellpadding="0" cellspacing="4">
+ <tr>
+ <td valign="top">
+ 
+ <!--健康指南 开始-->
+   <div class="vanfonbox_left" style="height: 486px;">
+<div class="toptitle">
+ <span class="title"><php>echo getTypeName(51);</php></span>
+ <span class="more"><a class="wenzi" title="{$vo.title}"  href='/index.php?s=/lists/51.html'>更多 &raquo;</a></span>
+ </div>
+ <ul>
+  <arclist model='article' where="typeid in(51)" order='addtime desc' num='1' id='vo'>
+  <li class="pic_txt">
+   <a class="wenzi" title="{$vo.title}"  href="{$vo.aid|url=articles,###}" >
+                      <img src="{$vo.imgurl}" alt="{$vo.title}" width="120" height="80">
+                      </a>
+  <p>{$vo.note|msubstr=###,0,36}<a class="wenzi" title="{$vo.title}"  href="{$vo.aid|url=articles,###}">[详细]</a></p>
+  </li>
+   </arclist> 
+<arclist model='article' where="typeid in(51)" order='addtime desc' num='10' id='vo'>
+<li class="normal"><a class="wenzi" title="{$vo.title}"  href="{$vo.aid|url=articles,###}"><img src="__TMPL__images/dot.png" width="5" height="5">{$vo.title|msubstr=###,0,16}</a></li>
+ </arclist> 
+ </ul>
+ </div>
+
+
+ </td>
+ <td class="lanmu2" valign="top" >
+        <!--司南图库开始-->
+
+		 <div class="vanfonbox_center"><div class="toptitle">
+ <span class="title"><php>echo getTypeName(61);</php></span>
+ <span class="more"><a class="wenzi" title="{$vo.title}"  href='/index.php?s=/lists/61.html'>更多 &raquo;</a></span>
+ </div>
+ 
+  <ul>
+  
+<arclist model='article' where="typeid in(61)" order='addtime desc' num='6' id='vo'>
+<li class="normal" style="float:left;width:170px;margin-top:5px;">
+ <img src="{$vo.imgurl}" alt="{$vo.title}" width="161" height="92"><br><a class="wenzi" title="{$vo.title}"  href="{$vo.aid|url=articles,###}">{$vo.title|msubstr=###,0,12}</a>
+ 
+</li>
+ </arclist> 
+ </ul>
+
+ </div>
+
+              
+       
+
+        <!--司南图库结束-->
+ </td>
+ <td  valign="top">
+<!--四书五经开始--> 
+          <div class="vanfonbox_left">
+<div class="toptitle">
+ <span class="title"><php>echo getTypeName(65);</php></span>
+ <span class="more"><a class="wenzi" title="{$vo.title}"  href='/index.php?s=/lists/65.html'>更多 &raquo;</a></span>
+ </div>
+ <ul>
+  <arclist model='article' where="typeid in(65)" order='addtime desc' num='1' id='vo'>
+  <li class="pic_txt">
+   <a class="wenzi" title="{$vo.title}"  href="{$vo.aid|url=articles,###}" >
+                      <img src="{$vo.imgurl}" alt="{$vo.title}" width="120" height="80">
+                      </a>
+  <p>{$vo.note|msubstr=###,0,36}<a class="wenzi" title="{$vo.title}"  href="{$vo.aid|url=articles,###}">[详细]</a></p>
+  </li>
+   </arclist> 
+<arclist model='article' where="typeid in(65)" order='addtime desc' num='3' id='vo'>
+<li class="normal"><a class="wenzi" title="{$vo.title}"  href="{$vo.aid|url=articles,###}"><img src="__TMPL__images/dot.png" width="5" height="5">{$vo.title|msubstr=###,0,16}</a></li>
+ </arclist> 
+ </ul>
+ </div>
+ <!--四书五经结束--> 
+<!--二十四史开始--> 
+   <div class="vanfonbox_left">
+<div class="toptitle">
+ <span class="title"><php>echo getTypeName(42);</php></span>
+ <span class="more"><a class="wenzi" title="{$vo.title}"  href='/index.php?s=/lists/42.html'>更多 &raquo;</a></span>
+ </div>
+ <ul>
+  <arclist model='article' where="typeid in(42)" order='addtime desc' num='1' id='vo'>
+  <li class="pic_txt">
+   <a class="wenzi" title="{$vo.title}"  href="{$vo.aid|url=articles,###}" >
+                      <img src="{$vo.imgurl}" alt="{$vo.title}" width="120" height="80">
+                      </a>
+  <p>{$vo.note|msubstr=###,0,36}<a class="wenzi" title="{$vo.title}"  href="{$vo.aid|url=articles,###}">[详细]</a></p>
+  </li>
+   </arclist> 
+<arclist model='article' where="typeid in(42)" order='addtime desc' num='3' id='vo'>
+<li class="normal"><a class="wenzi" title="{$vo.title}"  href="{$vo.aid|url=articles,###}"><img src="__TMPL__images/dot.png" width="5" height="5">{$vo.title|msubstr=###,0,16}</a></li>
+ </arclist> 
+ </ul>
+ </div>
+ </td>
+<!--二十四史结束--> 
+ </tr>
+
+
+</table>
+    <!--手拍秀
+
+<object style="padding:0;margin:0;float:left" classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" codebase="http://fpdownload.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=8,0,0,0" width="960" height="60">
+  <param name="movie" value="__TMPL__source/spx.swf" />
+  <param name="quality" value="high" />
+  <param name="allowScriptAccess" value="always" />
+  <param name="wmode" value="transparent">
+     <embed src="__TMPL__source/spx.swf"
+      quality="high"
+      type="application/x-shockwave-flash"
+      WMODE="transparent"
+      width="960"
+      height="60"
+      pluginspage="http://www.macromedia.com/go/getflashplayer"
+      allowScriptAccess="always" />
+</object>   -->
+  <!-- 手拍秀滚动图片代码开始 -->
+ <table align="center" class="bigtable">
+ <tr>
+ <td> <img src="__TMPL__images/spx.jpg" width="908" height="44" align="middle"></td>
+ </tr>
+<tr>
+<td>
+<div class="box" align="center" >
+    <div align="center" class="picbox">
+        <ul class="piclist mainlist">
+		<arclist model='article' where="typeid in(66)" order='addtime desc' num='8' id='vo'>
+				<li>
+					<a class="wenzi" title="{$vo.title}"  href="{$vo.aid|url=articles,###}" >
+						<img src="{$vo.imgurl}" alt="{$vo.title}" width="220px" height="120px">
+                  </a>
+				</li>
+		</arclist>
+		</ul>
+        <ul class="piclist swaplist"></ul>
+    </div>
+    <div class="og_prev"></div>
+    <div class="og_next"></div>
+</div>
+</td>
+</tr>
+</table>
+<!-- 代码结束 -->  
+  <table class="bigtable" border="0" cellpadding="0" cellspacing="4" >  
+
+  <tr>
+    
+  </tr>
+    <!-- 在线养生开始 --> 
+  <td colspan="2"> 
+  
+  <style>
+  .vanfonbox_left ul table.bottom_side_table img{margin: 0px 2px 0px 2px;
+float: left;}
+  </style>
+    <div class="vanfonbox_left">
+<div class="toptitle">
+ <span class="title"><php>echo getTypeName(68);</php></span>
+ <span class="more"><a class="wenzi" title="{$vo.title}"  href='/index.php?s=/lists/68.html'>更多 &raquo;</a></span>
+ </div>
+ <ul>
+  <table class="bottom_side_table"  border=8 cellSpacing=2 borderColor=#663300 cellPadding=2 bgColor=#330000 align=left>
+<TR>
+
+<TD><A href="http://217979541.blog.163.com/blog/static/11700004920144117654160/" target=_blank><IMG style="WIDTH: 26px; HEIGHT: 128px" title="" border=0 alt=立春养生篇 src="__ROOT__public/uploads/thumb/thumb_1403725049.jpg" width=26 height=128></A> <A href="http://217979541.blog.163.com/blog/static/117000049201441161123292/" target=_blank><IMG style="WIDTH: 27px; HEIGHT: 128px" title="" border=0 alt=雨水养生篇 src="http://img623.ph.126.net/qYJ9qAIWxKSvd152g_xVNw==/1937673739677814495.jpg" width=27 height=128></A> <A href="http://217979541.blog.163.com/blog/static/117000049201441162710879/" target=_blank><IMG style="WIDTH: 27px; HEIGHT: 128px" title="" border=0 alt=惊蛰养生篇 src="http://img623.ph.126.net/7t6akxUDWbkNuv8LEAT8PA==/1937673739677814488.jpg" width=27 height=128></A> <A href="http://217979541.blog.163.com/blog/static/117000049201441164030432/" target=_blank><IMG style="WIDTH: 27px; HEIGHT: 128px" title="" border=0 alt=春分养生篇 src="http://img623.ph.126.net/FXysIGYdSn5BCE_2I46scA==/1937673739677814484.jpg" width=26 height=128></A> <A href="http://care.39.net/zt/qmys/" target=_blank><IMG style="WIDTH: 26px; HEIGHT: 128px" title="" border=0 alt=清明养生篇 src="__ROOT__public/uploads/thumb/thumb_1403809655.jpg" width=26 height=128></A>
+<A href="http://care.39.net/zt/gyjq/" target=_blank><IMG style="WIDTH: 26px; HEIGHT: 128px" title="" border=0 alt=谷雨养生篇 src="__ROOT__public/uploads/thumb/thumb_1403810339.jpg" width=26 height=128></A><A href="http://care.39.net/zt/gyys/" target=_blank><IMG style="WIDTH: 26px; HEIGHT: 128px" title="" border=0 alt=立夏养生篇 src="__ROOT__public/uploads/thumb/thumb_1403810581.jpg" width=26 height=128></A><A href="http://care.39.net/zt/xmys/" target=_blank><IMG style="WIDTH: 26px; HEIGHT: 128px" title="" border=0 alt=小满养生篇 src="__ROOT__public/uploads/thumb/thumb_1403810636.jpg" width=26 height=128></A>
+
+</TD>
+</TR>
+
+
+</TABLE>
+ </ul>
+ </div>
+
+
+ </td>
+ <!--在线养生结束-->
+        
+ <td colspan="2" valign=top>
+
+  <div class="vanfonbox_center" style="height:191px;">
+<div class="toptitle">
+ <span class="title"><php>echo getTypeName(69);</php></span>
+ <span class="more"><a class="wenzi" title="{$vo.title}"  href='/index.php?s=/lists/69.html'>更多 &raquo;</a></span>
+ </div>
+ <ul>
+ <table width="370px" style="background-color:#fff;margin-left:10px;">      
+        <tr>
+         <td><a class="baozhi" href="http://www.peopledaily.com.cn/">人民日报</a></td>
+         <td><a class="baozhi" href="http://www.jfdaily.com.cn/">解放日报</a></td>
+         <td><a class="baozhi" href="http://www.gmw.cn/01gmrb/2009-01/23/default.htm">光明日报</a></td>
+         <td><a class="baozhi" href="http://www.legaldaily.com.cn/">法制日报</a></td>
+         <td><a class="baozhi" href="http://www.hnby.com.cn/">河南日报</a></td>   
+        </tr>  
+        <tr>
+         <td><a class="baozhi" href="http://newspaper.jcrb.com/html/2008-12/25/node_2.htm">检察日报</a></td>
+         <td><a class="baozhi" href="http://www.dzdaily.com.cn/">大众日报</a></td>
+         <td><a class="baozhi" href="http://whb.news365.com.cn/">文汇日报</a></td>
+         <td><a class="baozhi" href="http://www.bjd.com.cn/">北京日报</a></td>
+         <td><a class="baozhi" href="http://www.syd.com.cn/">沈阳日报</a></td>   
+        </tr>   
+        <tr>
+         <td><a class="baozhi" href="http://jlrbszb.chinajilin.com.cn/html/2009-02/07/node_117.htm">吉林日报</a></td>
+         <td><a class="baozhi" href="http://www.xinnews.com/">新晚报</a></td>
+         <td><a class="baozhi" href="http://www.qlwb.com.cn/">齐鲁晚报</a></td>
+         <td><a class="baozhi" href="http://www.beijingtimes.com.cn/">京华时报</a></td>
+         <td><a class="baozhi" href="http://www.lyd.com.cn/">洛阳日报</a></td> 
+        </tr>  
+        <tr>
+         <td><a class="baozhi" href="http://www.nanfangdaily.com.cn/">南方日报</a></td>
+         <td><a class="baozhi" href="http://www.nnwb.com/">南宁晚报</a></td>
+         <td><a class="baozhi" href="http://www.xmwb.com.cn/">新民晚报</a></td>
+         <td><a class="baozhi" href="http://www.ycwb.com.cn/">羊城晚报</a></td>
+         <td><a class="baozhi" href="http://www.qingdaonews.com/">青岛日报</a></td>  
+        </tr>    
+        <tr>
+         <td><a class="baozhi" href="http://www.cdwb.com.cn/">成都晚报</a></td>
+         <td><a class="baozhi" href="http://gzdaily.dayoo.com/">广州日报</a></td>
+         <td><a class="baozhi" href="http://hnrb.hinews.cn/html/2009-01/23/node_2.htm">海南日报</a></td>
+         <td><a class="baozhi" href="http://www.15525.com/work/f2009_01_20/124976.htm">武汉晨报</a></td>
+         <td><a class="baozhi" href="http://www.ycen.com.cn/ ">银川晚报</a></td>
+        
+        </tr>  
+        <tr>
+         <td><a class="baozhi" href="http://www.yangtse.com/">扬子晚报</a></td>
+         <td><a class="baozhi" href="http://www.tjrb.com.cn/">天津日报</a></td>
+         <td><a class="baozhi" href="http://www.gansudaily.com.cn/">甘肃日报</a></td>
+         <td><a class="baozhi" href="http://www.sxrb.com/">山西日报</a></td>
+         <td><a class="baozhi" href="http://www.hf365.com/html/">合肥晚报</a></td>
+         
+         
+        </tr>   
+        <tr>
+         <td><a class="baozhi" href="http://www.hbdaily.com.cn/">湖北日报</a></td>
+         <td><a class="baozhi" href="http://www.zzwb.com.cn/">郑州晚报</a></td>
+         <td><a class="baozhi" href="http://www.cjdaily.com.cn/">长江日报</a></td>
+         <td><a class="baozhi" href="http://www.yndaily.com.cn/">云南日报</a></td>
+          <td><a class="baozhi" href="http://www.yndaily.com.cn/">重庆晨报</a></td>
+        </tr>  
+        <tr>
+         <td><a class="baozhi" href="http://www.zjdaily.com.cn/">浙江日报</a></td>
+         <td><a class="baozhi" href="http://www.lndaily.com.cn/">辽宁日报</a></td>
+         <td><a class="baozhi" href="http://www.daliandaily.com.cn/">大连日报</a></td>
+         <td><a class="baozhi" href="http://www.wxrb.com/">无锡日报</a></td>
+         <td><a class="baozhi" href="http://www.ibdaily.com.cn/">国际商报</a></td> 
+        </tr>      
+        </table>
+ </ul>
+ </div>
+    
+ 
+      </td>                    
+                
+
+        <td colspan="2">   
+                <!-- 在线养生开始-->  
+                
+    <div class="vanfonbox_left">
+<div class="toptitle">
+ <span class="title"><php>echo getTypeName(67);</php></span>
+ <span class="more"><a class="wenzi" title="{$vo.title}"  href='/index.php?s=/lists/67.html'>更多 &raquo;</a></span>
+ </div>
+ <ul>
+ <TABLE class="bottom_side_table" borderColor=#663300 cellSpacing=2 cellPadding=2 align=left bgColor=#330000 border=8>
+<TBODY>
+<TR>
+<TD><A href="http://baike.baidu.com/view/2416397.htm?fr=aladdin" target=_blank><IMG src=__ROOT__public/uploads/thumb/thumb_1403715397.jpg></A> <A href="http://www.jincao.com/t1.htm" target=_blank><IMG src=__ROOT__public/uploads/thumb/thumb_1403715857.jpg></A> <A href="http://www.gushiwen.org/guwen/lunyu.aspx" target=_blank><IMG src=__ROOT__public/uploads/thumb/thumb_1403716057.jpg></A> <A href="http://so.gushiwen.org/guwen/book.aspx?b=%e5%8f%b2%e8%ae%b0" target=_blank><IMG src=__ROOT__public/uploads/thumb/thumb_1403716091.jpg></A> <A href="http://baike.baidu.com/link?url=_BF6Wd4_G46KaliT-3cS6UzUeqU2yg8EtxqF1ZkzRstcxZL3WaJKmDUTwcmulL5Z" target=_blank><IMG src="__ROOT__public/uploads/thumb/thumb_1403722632.jpg"></A> <A href="http://baike.baidu.com/subview/10182/5143269.htm?fr=aladdin" target=_blank><IMG src="__ROOT__public/uploads/thumb/thumb_1403722761.jpg"></A> 
+<A href="http://www.chazidian.com/zi/" target=_blank><IMG src=__ROOT__public/uploads/thumb/thumb_1403723741.jpg></a><A href="http://www.shigk.com/" target=_blank><IMG src=__ROOT__public/uploads/thumb/thumb_1403723867.jpg></A>
+
+</TD></TR></TBODY>
+</TABLE>
+
+ </ul>
+ </div>               
+                
+ 
+
+ 
+  </td>                       
+  <!--在线养生结束--> 
+</table>
+</div>
+
+
+<!--底部文件-->
+    <neq  name="config.indexlink" value="0">
+    <div align="center" id="FriendUrl">
+    <div id="FriendUrlTitle">{$config.indexlinktitle}<neq name="config.indexdiylink" value="0">【<a href="javascript:void(0)" onClick="document.getElementById('light').style.display='block';document.getElementById('fade').style.display='block';document.getElementById('fade').style.width = document.documentElement.scrollWidth + 'px';document.getElementById('fade').style.height = document.documentElement.scrollHeight + 'px';document.getElementById('light').style.left = (parseInt(document.documentElement.scrollWidth) - 400) / 2 + 'px';document.getElementById('light').style.top =parseInt(document.getElementById('FriendUrl').offsetTop) - 150 +'px';">链接申请</a>】
+    </neq>
+    </div>
+    <ul>
+    <volist name="link" id="vo">
+    <li><a href="{$vo.url}" target="_blank">{$vo.title}</a></li>
+    </volist>
+    </ul>
+    <eq name="config.indexlinkimg" value="1">
+    <div class="clear"></div><div class="linkimg">
+    <php>$k=1;</php> 
+    <volist name="logolink" id="vo">
+     <a href="{$vo.url}" target="_blank" style="margin-right:20px;"><img src="{$vo.logo}" alt="{$vo.title}" width="100px" height="50px"/></a>
+     <php>if ($k%7==0) echo "<br/>";</php> 
+          <php>$k++;</php>   
+     <!-- <php>if ($i%19==0) echo "<br/>";</php> 
+         <php>$i=$i+1;</php>    -->
+    </volist>
+
+
+    </div>
+    </eq>
+    <include file="$footer" />
+    </div>
+    
+    
+    
+    
+</body>
+</html>
